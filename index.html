@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/basic.css">
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="/static/basic.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Login Page </title>    
+</head>
+
+<body>
+    <center>
+        <h1> Projects Info </h1>
+    </center>
+    <form>
+        <div id="loginDiv" class="container">
+            <h1> LOGIN </h1>
+            <label>Username : </label>
+            <input type="text" placeholder="Enter Username" name="username" required id="username">
+            <label>Password : </label>
+            <input type="password" placeholder="Enter Password" name="password" required id="password">
+            <button id="LoginBtn" type="button" >Login</button>
+        </div>
+        <div id="tableDiv" class="hidden">
+            <p>
+                <label>Sort By:</label>
+                <select id="myList">
+                    <option value="ip.date_added" selected>Recent Projects</option>
+                    <option value="c.categorie_name">Category Name</option>
+                    <option value="iu.username">Username</option>
+                    <option value="ip.project_title">Project Title</option>
+                </select>
+            </p>
+            <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>ProjectTitle</th>
+                        <th>Username</th>
+                        <th>CategoryName</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyId">
+
+                </tbody>
+            </table>
+            <div id="buttonDiv" class="wrapper">
+                <button id="PreviousBtn" type="button">Previous</button>
+                <button id="NextBtn" type="button">Next</button>
+            </div>
+        </div>
+
+    </form>
+</body>
+
+</html>
